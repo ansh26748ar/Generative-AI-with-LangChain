@@ -4,12 +4,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 llm = HuggingFaceEndpoint(
-    repo_id="openai/gpt-oss-20b", # ignore
+    repo_id="meta-llama/Llama-3.1-8B-Instruct", # ignore
     task="text-generation"
 )
 
 model = ChatHuggingFace(llm=llm)
 
-result = model.invoke("Capital of Uttarpradesh")
+result = model.invoke("Who is Piyush Bansal")
 
 print(result.content)
+
