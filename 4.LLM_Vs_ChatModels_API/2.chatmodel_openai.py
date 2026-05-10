@@ -1,0 +1,16 @@
+from langchain_openai import ChatOpenAI
+from dotenv import load_dotenv
+
+load_dotenv()
+
+model = ChatOpenAI(model='gpt-4', temperature=0.7)
+
+result = model.invoke("What is the capital of India?")
+
+print(result)  #wrong
+
+'''Result : content , additional_kwargs, response_metadata, etc;
+but the answer is only in content so will print only result.content'''
+
+print(result.content) #right
+

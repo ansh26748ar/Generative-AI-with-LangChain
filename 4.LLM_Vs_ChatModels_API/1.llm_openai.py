@@ -1,3 +1,16 @@
+'''from langchain_openai import OpenAI
+from dotenv import load_dotenv
+
+load_dotenv()
+
+llm = OpenAI(model='gpt-3.5-turbo-instruct')
+
+result = llm.invoke("What is the capital of India?")
+
+print(result) '''
+
+
+
 from langchain_openai import OpenAI
 from dotenv import load_dotenv
 import os
@@ -14,4 +27,5 @@ try:
 except Exception as e:
     print(f"Error: {e}")
 
-#result : api key not working 
+#result : Error: OPENAI_API_KEY not found in environment variables 
+# Incorrect API key provided 
